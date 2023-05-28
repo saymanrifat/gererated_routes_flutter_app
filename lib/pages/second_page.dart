@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gererated_routes_flutter_app/cubits/first_cubit.dart';
 import 'package:gererated_routes_flutter_app/cubits/second_cubit.dart';
-import 'package:gererated_routes_flutter_app/pages/third_page.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key});
@@ -16,17 +14,13 @@ class _SecondPage extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("First Screen"),
+        title: Text("Second Screen"),
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ThirdPage(),
-                    ));
+                Navigator.pushNamed(context, '/third');
               },
-              icon: Icon(Icons.arrow_forward))
+              icon: Icon(Icons.arrow_forward_ios))
         ],
       ),
       body: Center(

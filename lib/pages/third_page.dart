@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gererated_routes_flutter_app/cubits/first_cubit.dart';
 import 'package:gererated_routes_flutter_app/cubits/third_cubit.dart';
 
 class ThirdPage extends StatefulWidget {
@@ -15,7 +14,7 @@ class _ThirdPage extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("First Screen"),
+        title: Text("Third Screen"),
       ),
       body: Center(
         child: BlocBuilder<ThirdCubit, int>(

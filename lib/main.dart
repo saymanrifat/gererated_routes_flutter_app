@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gererated_routes_flutter_app/cubits/first_cubit.dart';
-import 'package:gererated_routes_flutter_app/pages/first_page.dart';
+import 'package:gererated_routes_flutter_app/routes.dart';
 
 void main() {
   runApp(HomePages());
@@ -12,11 +10,9 @@ class HomePages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => FirstCubit(),
-      child: MaterialApp(
-        home: FirstPage(),
-      ),
+    return MaterialApp(
+      onGenerateRoute: Routes.onGeneratedRoute,
+      initialRoute: '/first',
     );
   }
 }

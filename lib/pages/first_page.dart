@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gererated_routes_flutter_app/cubits/first_cubit.dart';
-import 'package:gererated_routes_flutter_app/pages/second_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -19,11 +18,7 @@ class _FirstPageState extends State<FirstPage> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SecondPage(),
-                    ));
+                Navigator.pushNamed(context, '/second');
               },
               icon: Icon(Icons.arrow_forward))
         ],
